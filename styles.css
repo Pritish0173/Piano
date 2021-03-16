@@ -1,0 +1,43 @@
+body{
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piano {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+}
+
+.white {
+    width: 9%;
+    min-width: 60px;
+    height: 70%;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.black {
+    width: 8%;
+    height: 45%;
+    margin-left: -4%;
+    margin-right: -4%;
+    z-index: 2;
+    background-color: black;
+}
+
+.white.active {
+    background-color: lightgray;
+}
+
+.black.active {
+    background-color: lightslategray;
+}
