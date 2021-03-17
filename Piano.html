@@ -6,7 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Piano</title>
-    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelectorAll('.key').forEach(function(key) {
+                key.onclick = function() {
+                    const noteSound = document.getElementById(key.dataset.note)
+                    noteSound.currentTime = 0
+                    noteSound.play();
+                    key.classList.add('active')
+                    noteSound.addEventListener('ended', () => {
+                        key.classList.remove('active')
+                    })
+                };
+
+            });
+
+        });
+    </script>
 
 </head>
 
